@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color: #00cccc;
+    --header-color: #222c37;
+    --title-color: #1b2229;
+    --text-color: #455463;
+    --link-color: #b83c82;
+    --focus-link-color: #ff0066;
+    --light-grey: #e6e6e6;
+    --cyan: #19e3b1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 135%;
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 2em;
+    line-height: 1em;
+    color: var(--title-color);
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    word-wrap: break-word;
+}
+
+h2 {
+    font-size: 1.5em;
+    line-height: 1em;
+    color: var(--title-color);
+    font-weight: 700;
+    margin: 0 0 15px 0;
+}
+
+a {
+    color: var(--link-color);
+}
+a:focus, a:hover, a:active {
+    color: var(--focus-link-color);
+    text-decoration: none;
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/****************************************
+  ==== HEADER
+****************************************/
+div.header-wrapper {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 30;
+}
+
+div.header {
+    width: 100%;
+    height: 60px;
+    background: var(--header-color);
+}
+
+div.header .content {
+    min-width: 860px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+div.header .content .menu {
+    width: 100%;
+    float: left;
+    margin: 0 -170px 0 0;
+    position: relative;
+}
+
+div.header .content .spacer {
+    margin: 0 170px 0 0;
+}
+
+div.header .menu .title {
+    width: 371px;
+    height: 34px;
+    float: left;
+    padding: 20px 0 0 0;
+}
+
+div.header .menu .title a {
+    width: 371px;
+    height: 34px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+}
+
+div.header div.search-form {
+    float: right;
+    position: relative;
+}
+
+div.header div.search-form:before {
+    content: '';
+    width: 18px;
+    height: 60px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -18px;
+    background: url(/images/shard-left.png) -18px 0 no-repeat;
+}
+
+div.header div.search-form input.field {
+    width: 400px;
+    line-height: 20px;
+    padding: 20px 50px 20px 20px;
+    border: 0;
+    margin: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+div.header div.search-form input.field:focus {
+    background: #fff !important;
+}
+
+div.header div.search-form input.submit {
+    width: 30px;
+    height: 30px;
+    border: 0;
+    margin: 0;
+    cursor: pointer;
+    outline-width: 0;
+    text-indent: -9999em;
+    position: absolute;
+    top: 15px;
+    right: 40px;
+    background: url(/images/sprites.png) 5px -54px no-repeat;
+}
+
+div.header .more {
+    width: 195px;
+    height: 60px;
+    float: right;
+    position: relative;
+}
+
+div.header .more .filler {
+    width: 800%;
+    height: 60px;
+    background: var(--color);
+    position: absolute;
+    z-index: 14;
+    left: 0px;
+    top: 0;
+}
+
+div.header .more .filler:before {
+    content: '';
+    width: 18px;
+    height: 60px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    background: url(/images/shard-right.png) -18px 0 no-repeat;
+}
+
+div.header .more ul {
+    float: right;
+    position: relative;
+    z-index: 15;
+    list-style: none;
+    margin: 15px 15px 15px 0;
+}
+
+div.header .more ul li {
+    float: left;
+    margin: 0 0 0 20px;
+    font-size: 1em;
+    font-family: 'avalon', sans-serif;
+}
+
+div.header .more ul li a {
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    float: left;
+    padding: 0 31px 0 0;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    background: url(/images/sprites.png) right -112px no-repeat;
+}
+
+/****************************************
+  ==== TOOLBAR
+****************************************/
+div.toolbar {
+    width: 100%;
+    height: 40px;
+    background: var(--light-grey);
+    border-bottom: var(--header-color) 0px solid;
+}
+
+div.toolbar div.content {
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+}
+
+div.toolbar div.clear {
+    clear: both;
+    display: block;
+}
+
+div.version-number {
+    padding: 9px 7px;
+    float: left;
+    position: relative;
+}
+
+div.toolbar div.script-lang {
+    padding: 7px 0;
+    float: right;
+    position: relative;
+}
+
+div.toolbar div.script-lang ul li {
+    width: 46px;
+    height: 26px;
+    line-height: 26px;
+    display: block;
+    float: left;
+    margin: 0 0 0 1px;
+    text-align: center;
+    font-size: 0.75em;
+    background: #fff;
+}
+
+div.toolbar div.script-lang ul li.selected {
+    background-color: var(--header-color);
+    color: #fff;
+}
+
+/****************************************
+  ==== LAYOUT
+****************************************/
+div.master-wrapper {
+    min-width: 860px;
+    margin: 0 auto 0 auto;
+    padding: 100px 0 10px 0;
+}
+
+div.content-wrap {
+    width: 102%;
+    float: right;
+    margin: 0 0 0 -380px;
+    position: relative;
+}
+
+div.content-wrap div.content {
+    min-width: 460px;
+    padding: 20px 20px 0 20px;
+}
+
+div.content-wrap div.content div.section {
+    padding: 0 10px;
+    margin: 0 0 50px 0;
+    min-height: 400px;
+}
+
+div.content-block {
+    margin: 0 0 0 380px;
+}
+
+div.content-block-404 {
+    margin: 0 10px 0 10px;
+}
+
+
+.toc {
+  overflow-y: auto;
+  cursor: pointer;
+  margin-left: 20px;
+  padding-right: 20px;
+}
+
+.toc > ul:last-child {
+    padding-bottom: 50px;
+}
+
+/****************************************
+  ==== SIDEBAR
+****************************************/
+
+div.sidebar {
+    width: 340px;
+    margin: 0 40px 0 0;
+    float: left;
+    position: relative;
+    z-index: 2;
+}
+
+div.sidebar-wrap {
+    width: 339px;
+    position: fixed;
+    border-right: var(--light-grey) 1px solid;
+}
+
+div.sidebar p {
+    padding: 10px 20px;
+    background: var(--header-color);
+    margin: 0;
+}
+
+div.sidebar-menu h2 {
+    margin: 20px 0;
+    padding: 0 0 10px 0;
+    border-bottom: var(--light-grey) 1px solid;
+}
+
+div.sidebar-menu ul {
+    list-style-type: none;
+    margin: 0 0 10px 0;
+    position: relative;
+}
+
+div.sidebar-menu ul li {
+    font-size: 0.875em;
+    word-wrap: break-word;
+    margin: 0 0 8px 0;
+    line-height: 1.3em;
+    padding: 0 0 0 22px;
+    position: relative;
+}
+
+div.sidebar-menu ul li.nl span {
+    cursor: pointer;
+}
+
+div.sidebar-menu ul li div.leafnode {
+    width: 12px;
+    height: 12px;
+    border: #ffffff 1px solid;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    background: #ffffff url(/images/sprites.png) 0 0 no-repeat;
+    background-position: -51px -129px;
+}
+
+div.sidebar-menu ul li div.arrow {
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    border: var(--cyan) 1px solid;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    background: var(--cyan) url(/images/sprites.png) 0 0 no-repeat;
+}
+
+div.sidebar-menu ul li div.collapsed {
+    background-position: -52px -62px;
+}
+
+div.sidebar-menu ul li div.expanded {
+    background-position: -52px -96px;
+}
+
+div.sidebar-menu ul li a {
+    display: block;
+    color: var(--text-color);
+    word-wrap: break-word;
+    text-decoration: none;
+}
+
+div.sidebar-menu ul li a:hover {
+    text-decoration: underline;
+}
+
+div.sidebar-menu ul li a.current {
+    color: #000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+div.sidebar-menu ul li ul {
+    margin: 8px 0 8px 0;
+}
+
+div.sidebar-menu ul li ul li ul:before {
+    left: -15px;
+}
+
+div.sidebar-menu ul li ul li div.arrow {
+    left: 0;
+}
+
+div.sidebar-menu ul li ul li {
+    font-size: 1em;
+    padding: 0 0 0 22px;
+}
+
+div.sidebar-menu ul li ul li ul li {
+    font-size: 1em;
+}
+
+
+/****************************************
+  ==== FOOTER
+****************************************/
+div.footer-wrapper {
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+}
+
+div.footer {
+    height: 40px;
+    line-height: 40px;
+    margin: 0 10px;
+    font-size: 0.8125em;
+    border-top: var(--light-grey) 1px solid;
+}
+
+div.footer div.copy {
+    float: left;
+}
+
+div.footer div.copy a {
+    color: var(--text-color);
+    font-size: 130%;
+    font-weight: bold;
+}
