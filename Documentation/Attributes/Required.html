@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documentation for The Herd project, including setup guides, usage instructions, and API references.">
+    <meta name="author" content="The Herd Team">
+    <title>The Herd Documentation</title>
+    <link rel="icon" href="../../images/github-mark-white.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/core.css">
+    <script src="../../js/main.js" defer></script>
+</head>
+<body>
+        <div class="header-wrapper">
+            <div id="header" class="header">
+                <div class="content">
+                    <div class="spacer">
+                        <div class="menu">
+                            <div id="nav-open" for="nav-input" class="active">
+                                <span></span>
+                            </div>
+                            <div class="title">
+                                <a href="../index.html"><b>The Herd</b> Documentation</a>
+                            </div>
+                            <div class="search-form">
+                                <form action="30_search.html" method="get" class="apisearch">
+                                    <input type="text" name="q" aria-label="Search scripting documentation" placeholder="Search scripting..." autosave="Unity Reference" results="5" class="sbox field" id="q">
+                                    <input type="submit" class="submit">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more">
+                        <div class="filler"></div>
+                        <ul>
+                            <li>
+                            <a href="https://github.com/GDD-Minor-GTV3A/The-Herd/" target="_blank">GitHub Project</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="toolbar">
+                <div class="content clear">
+                    <div class="version-number" id="VersionNumber" data-target=".otherversionscontent">
+                        Version: <b>Unity 6</b> (6000.0.58f1)
+                    </div>
+                    <div class="script-lang">
+                        <ul>
+                            <li class="selected" data-lang="CS">C#</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="master-wrapper" class="master-wrapper clear">
+            <div id="sidebar" class="sidebar" style="left: 0px;">
+                <div class="sidebar-wrap">
+                    <div class="content">
+                        <div class="sidebar-menu">
+                            <div class="toc" id="customScrollbar" style="height: 544px;">
+                                <h2>Scripting API</h2>
+                                <ul>
+                                    <li class="nl">
+                                        <div class="arrow expanded"></div>
+                                        <span>Attributes</span>
+                                        <ul style>
+                                            <li class="nl">
+                                                <div class="leafnode"></div>
+                                                <a href="ReadOnly.html" id class>ReadOnly Attribute</a>
+                                            </li>
+                                            <li class="nl">
+                                                <div class="leafnode expanded"></div>
+                                                <a href="Required.html" id="current" class="current">Required Attribute</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="nl">
+                                        <div class="arrow collapsed"></div>
+                                        <span>Player</span>
+                                        <ul style="display: none;">
+                                            <li class="nl">
+                                                <div class="arrow collapsed"></div>
+                                                <span>Input System</span>
+                                                <ul style="display: none;">
+                                                    <li class="nl">
+                                                        <div class="leafnode"></div>
+                                                        <span>MovementEvent</span>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="nl">
+                                        <div class="arrow collapsed"></div>
+                                        <span>Tick System</span>
+                                        <ul style="display: none;">
+                                            <li class="nl">
+                                                <div class="leafnode"></div>
+                                                <span>Fixed</span>
+                                            </li>
+                                            <li class="nl">
+                                                <div class="leafnode"></div>
+                                                <span>Squential</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="nl">
+                                        <div class="arrow collapsed"></div>
+                                        <span>Audio</span>
+                                        <ul style="display: none;">
+                                            <li class="nl">
+                                                <div class="leafnode"></div>
+                                                <span>Fixed</span>
+                                            </li>
+                                            <li class="nl">
+                                                <div class="leafnode"></div>
+                                                <span>Squential</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="content-wrap" class="content-wrap opened-sidebar">
+                <div class="content-block">
+                    <div class="content">
+                        <div class="section">
+                            <div class="mb20 clear" id="">
+                                <h1 class="heading inherit">Required</h1>
+                                <div class="clear">
+                                </div>
+                                <p class="cl mb0 left mr10">class in Core.Shared</p>
+                                <p class="cl mb0 left mr10">/</p>
+                                <p class="cl mb0 left">Implemented in: <u>Core.Shared.Utilities</u></p>
+                                <div class="clear">
+                                </div>
+        
+                                <div class="clear">
+                                </div>
+                            </div>
+                            <div class="subsection">
+                                <div class="signature">
+                                    <div class="signature-CS sig-block">
+                                        <span style="color:red;">
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subsection">
+                                <h3>Description</h3>
+                                <p> Force the user to assign an object to a field.
+                                    <br><br>
+                                    Unity still runs with empty or null fields. To avoid checks or runtime errors, add the <code class="mono">
+                                    [Required]</code> attribute to them.
+                                    <br><br>
+                                    Unity will show a warning under the assigned field and will run a check before entering play mode.
+                                    This is done to prevent <code class="mono">NullReferenceException</code> and to ensure that every field that
+                                    requires a set reference is not empty.
+                                    <br><br>
+                                    To prevent anyone from entering playmode before all fields are assigned, Unity will check every object in the 
+                                    hierarchy that may use the <code class="mono">[Required]</code> attribute, checking that the attribute is not 
+                                    empty. If no error occurs playmonde will start without problems, otherwise playmonde won't start and the 
+                                    console will show log errors pointing at the exacts scripts that needs a reference.
+                                </p>
+                            </div>
+                            <div class="subsection" tabindex="0" style="position: relative;"><button class="copy-code"
+                                    title="Copy" type="button" aria-label="Copy code sample to the clipboard"
+                                    style="opacity: 0;"></button>
+                                    <pre class="codeExampleCS">
+using UnityEngine;
+using Core.Shared.Utilities<br>
+public class ExampleScript : MonoBehaviour
+{
+    //This field does not need a reference
+    public float number = 20;<br>
+    //This field needs a reference for it to work as intended
+    [<a href="Required.html">Required</a>] public Health healthScript;<br>
+    void OnCollisionEnter(Collider collider)
+    {
+        healthScript.Damage(number);
+    }
+}</pre>
+                                <div aria-live="polite" class="sr-only"></div>
+                            </div>
+                        </div>
+                        <div class="footer-wrapper">
+                            <div class="footer clear">
+                                <div class="copy">
+                                <p>
+                                    <known_issues>Is something described here not working as you expect it to?
+                                        Please contact <a href="https://discord.gg/78RjuqzQ" target="_blank">@Soramuele</a> on Discord
+                                        so we can work to fix it</known_issues>
+                                </p>
+                                    Copyright ©2025-2026 The Herd. All rights reserved. Built from: 6000.0.58f1. Built on: 08-10-2025.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

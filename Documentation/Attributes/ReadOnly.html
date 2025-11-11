@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documentation for The Herd project, including setup guides, usage instructions, and API references.">
+    <meta name="author" content="The Herd Team">
+    <title>The Herd Documentation</title>
+    <link rel="icon" href="../../images/github-mark-white.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/core.css">
+    <script src="../../js/main.js" defer></script>
+</head>
+<body>
+        <div class="header-wrapper">
+            <div id="header" class="header">
+                <div class="content">
+                    <div class="spacer">
+                        <div class="menu">
+                            <div id="nav-open" for="nav-input" class="active">
+                                <span></span>
+                            </div>
+                            <div class="title">
+                                <a href="../index.html"><b>The Herd</b> Documentation</a>
+                            </div>
+                            <div class="search-form">
+                                <form action="30_search.html" method="get" class="apisearch">
+                                    <input type="text" name="q" aria-label="Search scripting documentation" placeholder="Search scripting..." autosave="Unity Reference" results="5" class="sbox field" id="q">
+                                    <input type="submit" class="submit">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more">
+                        <div class="filler"></div>
+                        <ul>
+                            <li>
+                            <a href="https://github.com/GDD-Minor-GTV3A/The-Herd/" target="_blank">GitHub Project</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="toolbar">
+                <div class="content clear">
+                    <div class="version-number" id="VersionNumber" data-target=".otherversionscontent">
+                        Version: <b>Unity 6</b> (6000.0.58f1)
+                    </div>
+                    <div class="script-lang">
+                        <ul>
+                            <li class="selected" data-lang="CS">C#</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="master-wrapper" class="master-wrapper clear">
+            <div id="sidebar" class="sidebar" style="left: 0px;">
+                <div class="sidebar-wrap">
+                    <div class="content">
+                        <div class="sidebar-menu">
+                            <div class="toc" id="customScrollbar" style="height: 544px;">
+                                <h2>Scripting API</h2>
+                                <ul>
+                                    <li class="nl">
+                                        <div class="arrow expanded"></div>
+                                        <span>Attributes</span>
+                                        <ul>
+                                            <li class="nl">
+                                                <div class="leafnode expanded"></div>
+                                                <a href="ReadOnly.html" id="current" class="current">ReadOnly Attribute</a>
+                                            </li>
+                                            <li class="nl">
+                                                <div class="leafnode"></div>
+                                                <a href="Required.html" id class>Required Attribute</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="nl">
+                                        <div class="arrow collapsed"></div>
+                                        <span>Player</span>
+                                        <ul style="display: none;">
+                                            <li class="nl">
+                                                <div class="leafnode"></div>
+                                                <span>Input System</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="nl">
+                                        <div class="arrow collapsed"></div>
+                                        <span>Tick System</span>
+                                        <ul style="display: none;">
+                                            <li class="nl">
+                                                <div class="leafnode"></div>
+                                                <span>Fixed</span>
+                                            </li>
+                                            <li class="nl">
+                                                <div class="leafnode"></div>
+                                                <span>Squential</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="nl">
+                                        <div class="arrow collapsed"></div>
+                                        <span>Audio</span>
+                                        <ul style="display: none;">
+                                            <li class="nl">
+                                                <div class="leafnode"></div>
+                                                <span>Fixed</span>
+                                            </li>
+                                            <li class="nl">
+                                                <div class="leafnode"></div>
+                                                <span>Squential</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="content-wrap" class="content-wrap opened-sidebar">
+                <div class="content-block">
+                    <div class="content">
+                        <div class="section">
+                            <div class="mb20 clear" id="">
+                                <h1 class="heading inherit">ReadOnly</h1>
+                                <div class="clear">
+                                </div>
+                                <p class="cl mb0 left mr10">class in Core.Shared</p>
+                                <p class="cl mb0 left mr10">/</p>
+                                <p class="cl mb0 left">Implemented in: <u>Core.Shared.Utilities</u></p>
+                                <div class="clear">
+                                </div>
+                                <div class="clear">
+                                </div>
+                            </div>
+                            <div class="subsection">
+                                <h3>Description</h3>
+                                <p> Make users unable to modify a field in inspector.
+                                    <br><br>
+                                    When a variable or field is public in the inspector or serialized, the user is able to modify the field
+                                    at will.
+                                    <br><br>
+                                    For those fields that the user needs in inspector but don't want to touch add the <code class="mono">
+                                    [ReadOnly]</code> attribute to them. Unity will show that field in the inspector grayed out. That field
+                                    is visible but cannot be interacted with or modified.
+                                </p>
+                            </div>
+                            <div class="subsection" tabindex="0" style="position: relative;"><button class="copy-code"
+                                    title="Copy" type="button" aria-label="Copy code sample to the clipboard"
+                                    style="opacity: 0;"></button>
+                                    <pre class="codeExampleCS">
+using UnityEngine;
+using Core.Shared.Utilities<br>
+public class ExampleScript : MonoBehaviour
+{
+    //Those field can be modified in inspector
+    public float modifier = 2.5f;
+    [SerializeField] private int number = 2025<br>
+    //This variable is public but can not be modified in inspector
+    [<a href="ReadOnly.html">ReadOnly</a>] public float hour;<br>
+    void Update()
+    {
+        hour += (modifier / number) * Time.deltaTime;
+    }
+}</pre>
+                                <div aria-live="polite" class="sr-only"></div>
+                            </div>
+                        </div>
+                        <div class="footer-wrapper">
+                            <div class="footer clear">
+                                <div class="copy">
+                                <p>
+                                    <known_issues>Is something described here not working as you expect it to?
+                                        Please contact <a href="https://discord.gg/78RjuqzQ" target="_blank">@Soramuele</a> on Discord
+                                        so we can work to fix it</known_issues>
+                                </p>
+                                    Copyright ©2025-2026 The Herd. All rights reserved. Built from: 6000.0.58f1. Built on: 08-10-2025.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
