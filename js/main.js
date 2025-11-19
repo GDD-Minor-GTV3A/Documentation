@@ -1,4 +1,7 @@
 const nlEls = document.querySelectorAll('.nl');
+const versEl = document.querySelectorAll('version');
+
+document.querySelector('build').innerHTML = '20-11-2025';
 
 nlEls.forEach(nl => {
     nl.addEventListener('click', (e) => {
@@ -25,3 +28,7 @@ nlEls.forEach(nl => {
         }
     });
 });
+
+versEl.forEach(ver => {
+    ver.innerHTML = '6000.0.62f1';
+})
