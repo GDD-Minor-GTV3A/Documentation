@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documentation for The Herd project, including setup guides, usage instructions, and API references.">
+    <meta name="author" content="The Herd Team">
+    <title>The Herd Documentation</title>
+    <link rel="icon" href="../images/github-mark-white.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/core.css">
+    <script src="../js/main.js" defer></script>
+</head>
+<body>
+        <div class="header-wrapper">
+            <div id="header" class="header">
+                <div class="content">
+                    <div class="spacer">
+                        <div class="menu">
+                            <div id="nav-open" for="nav-input" class="active">
+                                <span></span>
+                            </div>
+                            <div class="title">
+                                <a href="../index.html"><b>The Herd</b> Documentation</a>
+                            </div>
+                            <div class="search-form">
+                                <form action="30_search.html" method="get" class="apisearch">
+                                    <input type="text" name="q" aria-label="Search scripting documentation" placeholder="Search scripting..." autosave="Unity Reference" results="5" class="sbox field" id="q">
+                                    <input type="submit" class="submit">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more">
+                        <div class="filler"></div>
+                        <ul>
+                            <li>
+                            <a href="https://github.com/GDD-Minor-GTV3A/The-Herd/" target="_blank">GitHub Project</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="toolbar">
+                <div class="content clear">
+                    <div class="version-number" id="VersionNumber" data-target=".otherversionscontent">
+                        Version: <b>Unity 6</b> (<version></version>)
+                    </div>
+                    <div class="script-lang">
+                        <ul>
+                            <li class="selected" data-lang="CS">C#</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="master-wrapper" class="master-wrapper clear">
+            <div id="sidebar" class="sidebar" style="left: 0px;"></div> <!-- Set dynamically-->
+            <div id="content-wrap" class="content-wrap opened-sidebar">
+                <div class="content-block">
+                    <div class="content">
+                        <div class="section">
+                            <div class="mb20 clear" id="">
+                                <h1 class="heading inherit">InputHandler</h1>
+                                <div class="clear">
+                                </div>
+                                <p class="cl mb0 left mr10">class in Core</p>
+                                <p class="cl mb0 left mr10">/</p>
+                                <p class="cl mb0 left">Implemented in: <u>Core.InputSystem</u></p>
+                                <div class="clear">
+                                </div>
+        
+                                <div class="clear">
+                                </div>
+                            </div>
+                            <div class="subsection">
+                                <div class="signature">
+                                    <div class="signature-CS sig-block">
+                                        <span style="color:red;">
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subsection">
+                                <h3>Description</h3>
+                                <p> ScriptableObject holding callbacks for the player input.
+                                    <br><br>
+                                    Referencing this will grant access to every input event that has been defined. Those events can easily be
+                                    modified when needed
+                                    <br><br>
+                                </p>
+                            </div>
+                            <!-- Table of calls -->
+                            <div class="subsection">
+                                <h3>Public Methods</h3>
+                                <table class="list">
+                                    <thead><tr>
+                                        <th>Method</th>
+                                        <th>Description</th>
+                                    </tr></thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">MovementEvent</code></td>
+                                            <td class="desc">
+                                                Gameplay input. Event that listen to whenever the player moves. Returns a Vector2.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">LookEvent</code></td>
+                                            <td class="desc">
+                                                Gameplay input. Event that listen to whenever the mouse/right stick moves. Returns a Vector2.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">MainUsageEvent</code></td>
+                                            <td class="desc">
+                                                Gameplay input. Event that listen to the press of the main usage button.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">MainUsageCanceledEvent</code></td>
+                                            <td class="desc">
+                                                Gameplay input. Event that listen to when the main usage button is let go.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">SecondaryUsageEvent</code></td>
+                                            <td class="desc">
+                                                Gameplay input. Event that listen to the press of the main usage button.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">SecondaryUsageCanceledEvent</code></td>
+                                            <td class="desc">
+                                                Gameplay input. Event that listen to when the main usage button is let go.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">InteractEvent</code></td>
+                                            <td class="desc">
+                                                Gameplay input. Event that listen to the press of the interact button.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">SprintEvent</code></td>
+                                            <td class="desc">
+                                                Gameplay input. Event that listen to the press and release of the sprint button. Returns a boolean.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">ReloadEvent</code></td>
+                                            <td class="desc">
+                                                Gameplay input. Event that listen to the press of the interact button.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">SlotsEvent</code></td>
+                                            <td class="desc">
+                                                Gameplay input. Event that listen to a slot button is pressed. Returns an int depending on the pressed slot.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">SlotsScrollEvent</code></td>
+                                            <td class="desc">
+                                                Gameplay input. Event that listen to the scroll wheel to change slots. Returns a Vector2.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">BarkEvent</code></td>
+                                            <td class="desc">
+                                                Gameplay input. Event that listen to the press of the bark button.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">NavigateEvent</code></td>
+                                            <td class="desc">
+                                                UI input. Event that listen to the press of the navigation buttons. Returns a Vector2.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- Example script -->
+                            <div class="subsection" tabindex="0" style="position: relative;"><button class="copy-code"
+                                    title="Copy" type="button" aria-label="Copy code sample to the clipboard"
+                                    style="opacity: 0;"></button>
+                                    <pre class="codeExampleCS">
+using UnityEngine;
+using Core.InputSystem;<br>
+public class ExampleScript : MonoBehaviour
+{
+    //This field holds the InputHandler scriptableObject for inputs reference
+    [<a href="Required.html">Required</a>] public InputHandler playerInputs;
+    
+    void OnEnable()
+    {
+        //Subscribe to the player movement event
+        playerInputs.MovementEvent += PlayerMovement;
+    }
+    
+    void OnDisable()
+    {
+        //Unsubscribe to the player movement event
+        playerInputs.MovementEvent -= PlayerMovement;
+    }
+
+    private void PlayerMovement(Vector2 move)
+    {
+        //...
+        //Elaborate how this script will handle player movement
+        //...
+    }
+}</pre>
+                                <div aria-live="polite" class="sr-only"></div>
+                            </div>
+                        </div>
+                        <div class="footer-wrapper">
+                            <div class="footer clear">
+                                <div class="copy">
+                                <p>
+                                    <known_issues>Is something described here not working as you expect it to?
+                                        Please contact <a href="https://discord.gg/78RjuqzQ" target="_blank">@Soramuele</a> on Discord
+                                        so we can work to fix it</known_issues>
+                                </p>
+                                    Copyright ©2025-2026 The Herd. All rights reserved. Built from: <version></version>. Built on: <build></build>.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

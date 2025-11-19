@@ -3,88 +3,72 @@
         <div class="sidebar-menu">
             <div class="toc" id="customScrollbar" style="height: 544px;">
                 <h2>Scripting API</h2>
-                <ul>
-                    <li class="nl"> <!-- Attributes-->
+                <ul> <!-- Attributes-->
+                    <li class="nl">
                         <div class="arrow collapsed"></div>
                         <span>Attributes</span>
                             <ul style="display: none;">
                                 <li class="nl">
                                     <div class="leafnode"></div>
-                                    <a href="ReadOnly.html">ReadOnly Attribute</a>
+                                    <a href="ReadOnly.html" class>ReadOnly</a>
                                 </li>
                                 <li class="nl">
                                     <div class="leafnode"></div>
-                                    <a href="Required.html">Required Attribute</a>
+                                    <a href="Required.html" class>Required</a>
                                 </li>
                             </ul>
                     </li>
                 </ul>
-                <ul>
-                    <li class="nl"> <!-- Interfaces -->
+                <ul> <!-- Interfaces -->
+                    <li class="nl">
                         <div class="arrow collapsed"></div>
                         <span>Interfaces</span>
                         <ul style="display: none;">
                             <li class="nl">
                                 <div class="leafnode"></div>
-                                <a href="IDamagable.html">IDamagable</a>
+                                <a href="IDamagable.html" class>IDamagable</a>
                             </li>
                             <li class="nl">
                                 <div class="leafnode"></div>
-                                <a href="IHealable.html">IHealable</a>
+                                <a href="IHealable.html" class>IHealable</a>
                             </li>
                             <li class="nl">
                                 <div class="leafnode"></div>
-                                <a href="IHiddenObject.html">IHiddenObject</a>
+                                <a href="IHiddenObject.html" class>IHiddenObject</a>
                             </li>
                             <li class="nl">
                                 <div class="leafnode"></div>
-                                <a href="IKillable.html">IKillable</a>
+                                <a href="IKillable.html" class>IKillable</a>
                             </li>
                             <li class="nl">
                                 <div class="leafnode"></div>
-                                <a href="IPlayerTool.html">IPlayerTool</a>
+                                <a href="IPlayerTool.html" class>IPlayerTool</a>
                             </li>
                             <li class="nl">
                                 <div class="leafnode"></div>
-                                <a href="IScareable.html">IScareable</a>
+                                <a href="IScareable.html" class>IScareable</a>
                             </li>
                             <li class="nl">
                                 <div class="leafnode"></div>
-                                <a href="IState.html">IState</a>
+                                <a href="IState.html" class>IState</a>
                             </li>
                         </ul>
                     </li>
                 </ul>
-                <ul>
+                <ul> <!-- Input System-->
                     <li class="nl">
                         <div class="arrow collapsed"></div>
-                        <span>Tick System</span>
-                        <ul style="display: none;">
-                            <li class="nl">
-                                <div class="leafnode"></div>
-                                <span>Fixed</span>
-                            </li>
-                            <li class="nl">
-                                <div class="leafnode"></div>
-                                <span>Squential</span>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="nl">
-                        <div class="arrow collapsed"></div>
-                        <span>Audio</span>
-                        <ul style="display: none;">
-                            <li class="nl">
-                                <div class="leafnode"></div>
-                                <span>Fixed</span>
-                            </li>
-                            <li class="nl">
-                                <div class="leafnode"></div>
-                                <span>Squential</span>
-                            </li>
-                        </ul>
+                        <span>Input System</span>
+                            <ul style="display: none;">
+                                <li class="nl">
+                                    <div class="leafnode"></div>
+                                    <a href="InputHandler.html" class>InputHandler</a>
+                                </li>
+                                <li class="nl">
+                                    <div class="leafnode"></div>
+                                    <a href="PlayerInput.html" class>PlayerInput</a>
+                                </li>
+                            </ul>
                     </li>
                 </ul>
             </div>

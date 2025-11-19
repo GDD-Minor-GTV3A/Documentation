@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documentation for The Herd project, including setup guides, usage instructions, and API references.">
+    <meta name="author" content="The Herd Team">
+    <title>The Herd Documentation</title>
+    <link rel="icon" href="../images/github-mark-white.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/core.css">
+    <script src="../js/main.js" defer></script>
+</head>
+<body>
+        <div class="header-wrapper">
+            <div id="header" class="header">
+                <div class="content">
+                    <div class="spacer">
+                        <div class="menu">
+                            <div id="nav-open" for="nav-input" class="active">
+                                <span></span>
+                            </div>
+                            <div class="title">
+                                <a href="../index.html"><b>The Herd</b> Documentation</a>
+                            </div>
+                            <div class="search-form">
+                                <form action="30_search.html" method="get" class="apisearch">
+                                    <input type="text" name="q" aria-label="Search scripting documentation" placeholder="Search scripting..." autosave="Unity Reference" results="5" class="sbox field" id="q">
+                                    <input type="submit" class="submit">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more">
+                        <div class="filler"></div>
+                        <ul>
+                            <li>
+                            <a href="https://github.com/GDD-Minor-GTV3A/The-Herd/" target="_blank">GitHub Project</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="toolbar">
+                <div class="content clear">
+                    <div class="version-number" id="VersionNumber" data-target=".otherversionscontent">
+                        Version: <b>Unity 6</b> (<version></version>)
+                    </div>
+                    <div class="script-lang">
+                        <ul>
+                            <li class="selected" data-lang="CS">C#</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="master-wrapper" class="master-wrapper clear">
+            <div id="sidebar" class="sidebar" style="left: 0px;"></div> <!-- Set dynamically-->
+            <div id="content-wrap" class="content-wrap opened-sidebar">
+                <div class="content-block">
+                    <div class="content">
+                        <div class="section">
+                            <div class="mb20 clear" id="">
+                                <h1 class="heading inherit">PlayerInput</h1>
+                                <div class="clear">
+                                </div>
+                                <p class="cl mb0 left mr10">class in Team1</p>
+                                <p class="cl mb0 left mr10">/</p>
+                                <p class="cl mb0 left">Implemented in: <u>Gameplay.Player</u></p>
+                                <div class="clear">
+                                </div>
+        
+                                <div class="clear">
+                                </div>
+                            </div>
+                            <div class="subsection">
+                                <div class="signature">
+                                    <div class="signature-CS sig-block">
+                                        <span style="color:red;">
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subsection">
+                                <h3>Description</h3>
+                                <p> Class responsable to read and broadcast player inputs.
+                                    <br><br>
+                                    Holds every input action for the player and returns it with public getters for each action. This script is
+                                    responsable to initialize all player input actions and manage the cursor position in the game world.
+                                    <br><br>
+                                </p>
+                            </div>
+                            <!-- Table of calls -->
+                            <div class="subsection">
+                                <h3>Public Methods</h3>
+                                <table class="list">
+                                    <thead><tr>
+                                        <th>Method</th>
+                                        <th>Description</th>
+                                    </tr></thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">Move</code></td>
+                                            <td class="desc">
+                                                Returns a Vector2 value for the movement input of the player.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">Look</code></td>
+                                            <td class="desc">
+                                                Current position of the cursor in the world. Returns an <a href="">Observable</a>.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">Run</code></td>
+                                            <td class="desc">
+                                                Getter for the run button. Returns <b>true</b> when sprint button is hold, otherwhise <b>false</b>.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">Reload</code></td>
+                                            <td class="desc">
+                                                Input action for reload button. Returns an InputAction. Use for this actions: started, performed, canceled.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">MainUsage</code></td>
+                                            <td class="desc">
+                                                Input action for main usage button. Returns an InputAction. Use for this actions: started, performed, canceled.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">SecondaryUsage</code></td>
+                                            <td class="desc">
+                                                Input action for secondary usage button. Returns an InputAction. Use for this actions: started, performed, canceled.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">SlotsScroll</code></td>
+                                            <td class="desc">
+                                                Input action for scrolling. Returns an InputAction. Use for this actions: started, performed, canceled.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">Slot_1</code></td>
+                                            <td class="desc">
+                                                Input action for slot 1 button. Returns an InputAction. Use for this actions: started, performed, canceled.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">Slot_2</code></td>
+                                            <td class="desc">
+                                                Input action for slot 2 button. Returns an InputAction. Use for this actions: started, performed, canceled.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">Slot_3</code></td>
+                                            <td class="desc">
+                                                Input action for slot 3 button. Returns an InputAction. Use for this actions: started, performed, canceled.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="footer-wrapper">
+                            <div class="footer clear">
+                                <div class="copy">
+                                <p>
+                                    <known_issues>Is something described here not working as you expect it to?
+                                        Please contact <a href="https://discord.gg/78RjuqzQ" target="_blank">@Soramuele</a> on Discord
+                                        so we can work to fix it</known_issues>
+                                </p>
+                                    Copyright ©2025-2026 The Herd. All rights reserved. Built from: <version></version>. Built on: <build></build>.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
