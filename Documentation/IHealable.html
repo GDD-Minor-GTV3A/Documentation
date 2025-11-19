@@ -7,7 +7,7 @@
     <meta name="author" content="The Herd Team">
     <title>The Herd Documentation</title>
     <link rel="icon" href="../images/github-mark-white.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/core.css">
     <script src="../js/main.js" defer></script>
 </head>
 <body>
@@ -20,7 +20,7 @@
                                 <span></span>
                             </div>
                             <div class="title">
-                                <a href="index.html"><b>The Herd</b> Documentation</a>
+                                <a href="../index.html"><b>The Herd</b> Documentation</a>
                             </div>
                             <div class="search-form">
                                 <form action="30_search.html" method="get" class="apisearch">
@@ -56,18 +56,49 @@
 
         <div id="master-wrapper" class="master-wrapper clear">
             <div id="sidebar" class="sidebar" style="left: 0px;"></div> <!-- Set dynamically-->
-            <div id="content-wrap" class="content-wrap">
+            <div id="content-wrap" class="content-wrap opened-sidebar">
                 <div class="content-block">
                     <div class="content">
                         <div class="section">
-                            <h1>Welcome to The Herd Scripting Reference!</h1>
-                            <p>This section of the documentation contains details of the scripting API that our project provides.
-                                To use this information, you should be familiar with the basic theory and practice of scripting in Unity.</p>
-                            <p>The scripting reference is organised according to the classes available to scripts which are described along
-                                with their methods, properties and any other information relevant to their use.</p>
-                            <p>The pages are extensively furnished with example code ("examples").</p>
-                            <p>API are grouped by namespaces they belong to, and can be selected from the sidebar to the left.
-                                For most users, the <b>Utilities</b> section will be the main port of call.</p>
+                            <div class="mb20 clear" id="">
+                                <h1 class="heading inherit">IHealable</h1>
+                                <div class="clear">
+                                </div>
+                                <p class="cl mb0 left mr10">interface in Gameplay.HealthSystem</p>
+                                <div class="clear">
+                                </div>
+                                <div class="clear">
+                                </div>
+                            </div>
+                            <div class="subsection">
+                                <h3>Description</h3>
+                                <p> Interface for class capable of recieving heal.</p>
+                            </div>
+                            <br>
+                            <div class="subsection">
+                                <h3>Public Methods</h3>
+                                <table class="list">
+                                    <thead><tr>
+                                        <th>Method</th>
+                                        <th>Description</th>
+                                    </tr></thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">HealEvent</code></td>
+                                            <td class="desc">
+                                                Handles an event variable. This will propagate another event. Returns a UnityEvent.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">Heal</code></td>
+                                            <td class="desc">
+                                                Function that will handle how the class will compute heal. Takes a float as a parameter.
+                                                Call this funciton to heal the implementing class.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                         <div class="footer-wrapper">
                             <div class="footer clear">
