@@ -48,6 +48,14 @@ jobs:
           # - /css/ -> css/ (remove leading slash so assets resolve under project pages path)
           # - apply same rules for js, images and Templates
           find site -type f \( -name '*.html' -o -name '*.css' \) -print0 | xargs -0 sed -i "s#\.\./css/#css/#g; s#\.\./js/#js/#g; s#\.\./images/#images/#g; s#\.\./Templates/#Templates/#g; s#\"/css/#\"css/#g; s#\'\/css/#\'css/#g; s#(/|\s)/css/#css/#g; s#\"/js/#\"js/#g; s#\'\/js/#\'js/#g; s#(/|\s)/js/#js/#g; s#\"/images/#\"images/#g; s#\'\/images/#\'images/#g; s#(/|\s)/images/#images/#g" || true
+      - name: Debug site contents
+        run: |
+          echo "--- site root ---"
+          ls -la site || true
+          echo "--- recursive listing (dirs) ---"
+          find site -type d -maxdepth 4 -print || true
+          echo "--- files summary ---"
+          find site -type f -print | sed -e 's#^#FILE: #' || true
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
