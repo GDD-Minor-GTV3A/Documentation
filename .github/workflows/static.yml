@@ -31,13 +31,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Build site
+        run: |
+          set -eux
+          rm -rf site
+          mkdir site
+          # Copy the generated documentation HTML into the site root
+          cp -r Documentation/* site/
+          # Copy asset directories (if present) into site so paths are resolved
+          cp -r css site/ || true
+          cp -r images site/ || true
+          cp -r js site/ || true
+          cp -r Templates site/ || true
+          # Fix common relative paths in the HTML files (../css -> css, etc.)
+          find site -type f -name '*.html' -print0 | xargs -0 sed -i 's#\.\./css/#css/#g; s#\.\./js/#js/#g; s#\.\./images/#images/#g; s#\.\./Templates/#Templates/#g' || true
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: './Documentation/'
+          # Upload the prepared site folder as the Pages artifact
+          path: 'site'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
